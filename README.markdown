@@ -1,3 +1,8 @@
+This is a codebase that Tyler M and Jared built a long time ago; thinking it might be good for labs/old archive idk - it's a good web app example (it IS dated though). 
+Issues: 
+* needs to fix retina images.
+* needs to load properly in the browser; if you drag in the index.html page into a browser it works, but clicking on it does not; want to talk w JD about it.
+
 #Mobile Boilerplate http://html5boilerplate.com
 v1.1
 
