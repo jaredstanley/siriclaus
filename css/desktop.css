@@ -1,0 +1,174 @@
+/* styles for desktop */
+
+body {
+	background:#000;
+	position:relative;
+}
+
+.snowflake {
+	width:29px;
+	height:19px;
+	background:url(../img/snowflake.png) no-repeat;
+	pointer-events:none;
+}
+
+#desktopView {
+	position:relative;
+	width:1491px;
+	min-height:1492px;
+	margin:0 auto;
+	overflow-x:hidden;
+	overflow-y:auto;
+	background-color:#FFFFFF;
+	background:url(../img/dt_background_nosnow.jpg) no-repeat;
+}
+
+#desktopView.no-snow {
+	background:url(../img/dt_background.jpg) no-repeat;
+}
+
+#desktopView #snowContainer {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:1491px;
+	height:1492px;
+	display:none;
+	-webkit-mask-image: url(../img/snowmask.png);
+	-webkit-mask-repeat: no-repeat; 
+}
+
+#iphone {
+	width:380px;
+	height:744px;
+	background:url(../img/iphoneBody.png) no-repeat;
+	z-index:1001;
+	display:block;
+	pointer-events:none;
+	position:absolute;
+	top:220px;
+	left:548px;
+}
+
+#container {
+  width:320px;
+  height:480px;
+  position:absolute;
+  top: -306px;
+  left: -11px;
+  overflow:hidden;
+  display:none;
+  background:#000;
+}
+
+.center_body {
+	top:137px;
+}
+
+/* Info Footer */
+
+#infoFooter {
+	text-align:center;
+	width: 749px;
+	height:138px;
+	position:absolute;
+	top: 1009px;
+	left: 348px;
+}
+
+#infoFooter a.logo {
+	position:absolute;
+	top: 192px;
+	left: 220px;
+	width:174px;
+	height:53px;
+	opacity: 0;
+	display:block;
+}
+
+#infoFooter p {
+	font-family:Helvetica , Arial , sans-serif;
+	font-size:20px;
+	font-style:italic;
+	color:#CCCCCC;
+	font-weight:normal;
+}
+
+#infoFooter p a {
+	color:#339900;
+	text-decoration:none;
+}
+
+#infoFooter p.besure {
+	font-size:16px;
+	font-style:normal;
+}
+
+
+#infoFooter p.bestuse {
+	font-size:11px;
+	font-style:normal;
+}
+
+#infoFooter p.bestuse a {
+	text-decoration:underline;
+	color:#CCCCCC;
+} 
+
+/* Share Buttons */
+
+#share-btns {
+	margin:0;
+	padding:0;
+	width:63px;
+	height:291px;
+	position:absolute;
+	top:742px;
+	left:1428px;
+	display:none;
+}
+
+#share-btns li {
+	width:63px;
+	height:67px;
+	display:block;
+	margin:0 0 6px 0;
+	padding:0;
+}
+
+#share-btns a:hover {
+	opacity:0.8;
+}
+
+#share-btns a.facebook {
+	width:63px;
+	height:67px;
+	overflow:hidden;
+	background:url(../img/share-btns-sprite.png) no-repeat 0px 0px;	
+	display:block;
+}
+
+#share-btns a.twitter {
+	width:63px;
+	height:67px;
+	overflow:hidden;
+	background:url(../img/share-btns-sprite.png) no-repeat 0px -73px;	
+	display:block;
+}
+
+#share-btns a.tumblr {
+	width:63px;
+	height:67px;
+	overflow:hidden;
+	background:url(../img/share-btns-sprite.png) no-repeat 0px -146px;	
+	display:block;
+}
+
+#share-btns a.gplus {
+	width:63px;
+	height:67px;
+	overflow:hidden;
+	background:url(../img/share-btns-sprite.png) no-repeat 0px -224px;	
+	display:block;
+}
+

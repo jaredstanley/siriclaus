@@ -1,0 +1,228 @@
+<!doctype html>
+<!-- Conditional comment for mobile ie7 http://blogs.msdn.com/b/iemobile/ -->
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+
+  <title>SiriClaus</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile viewport optimization http://goo.gl/b9SaQ -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="160">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=no">
+
+  <!-- Home screen icon  Mathias Bynens http://goo.gl/6nVq0 -->
+
+  <!-- For iPhone 4 with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/h/apple-touch-icon.png">
+  <!-- For first-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/m/apple-touch-icon.png">
+  <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="img/l/apple-touch-icon-precomposed.png">
+  <!-- For nokia devices: -->
+  <link rel="shortcut icon" href="img/l/apple-touch-icon.png">
+
+  <link rel="apple-touch-icon" href="img/l/apple-touch-icon.png" />
+
+  <!--iOS web app, deletable if not needed -->
+  <!--the script prevents links from opening in mobile safari. https://gist.github.com/1042026 -->
+   <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+  <link rel="apple-touch-startup-image" href="img/splash.jpg">
+  
+
+  <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+  <meta http-equiv="cleartype" content="on">
+
+  <!-- more tags for your 'head' to consider https://gist.github.com/849231 -->
+
+  <meta property="og:title" content="Introducing Siri Claus" />
+<meta property="og:description" content="The new web app that will answer all those tough questions kids ask about Santa. Brought to you by the merry folks at Tribal DDB San Francisco." />
+<meta property="og:image" content="img/splash.jpg" />
+
+
+
+
+
+
+
+  <!-- Main Stylesheet -->
+
+  <style type='text/css'>
+    body {
+      background:#000;
+    }
+
+    #main #page1 {
+      position:absolute;
+      top:0;
+      left:0;
+      display:block;
+      background:#999;
+      width:320px;
+      min-height:480px;
+      background:url(../img/default.jpg);
+    }
+
+    /* For retina display */
+    @media screen and (-webkit-device-pixel-ratio: 2) {
+
+      #main #page1 {
+        background-size:100% 100%;
+        background:url(../img/default@2x.jpg) no-repeat;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="css/style.css?v=1">
+
+  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+  <script src="js/libs/modernizr-custom.js"></script>
+  <!-- Media Queries Polyfill https://github.com/shichuan/mobile-html5-boilerplate/wiki/Media-Queries-Polyfill -->
+  <script>Modernizr.mq('(min-width:0)') || document.write('<script src="js/libs/respond.min.js">\x3C/script>')</script>
+</head>
+<body>
+<!-- iphone container -->
+<div id='desktopView'>
+<div id='iphone'></div>
+<div id='landscapeModal'></div>
+<div id='snowContainer'></div>
+
+<div id='container'>
+  <div id="main">
+  
+    <!-- Page 1 -->
+    <div id='page1'>
+      <div id='preloader'><span></span></div>
+      <div id='getStartedPopup'></div>
+    </div>
+
+    <!-- Page 2 -->
+    <div id='page2'>
+    <div id='infoButton'></div>
+    <div id='questions'>
+        <section class='question clearfix'>
+          <p></p>
+          <ul class='options'>
+            <li class='yes'  data-label='Yes' data-answer='0,0'></li>
+            <li class='no'   data-label='No' data-answer='0,1'></li>
+            <li class='rand' data-label='Suprise me' data-answer='0,2'></li>
+          </ul>
+        </section>
+        <section class='question clearfix'>
+          <p></p>
+          <ul class='options'>
+            <li class='yes'  data-label='Soon' data-answer='1,0'></li>
+            <li class='no'   data-label='Never' data-answer='1,1'></li>
+            <li class='rand' data-label='Suprise me' data-answer='1,2'></li>
+          </ul>
+        </section>
+        <section class='question clearfix'>
+          <p></p>
+          <ul class='options'>
+            <li class='yes'  data-label='Yes' data-answer='2,0'></li>
+            <li class='no'   data-label='No' data-answer='2,1'></li>
+            <li class='rand' data-label='Suprise me' data-answer='2,2'></li>
+          </ul>
+        </section>
+        <section class='question clearfix'>
+          <p></p>
+          <ul class='options'>
+            <li class='yes'  data-label='Naughty' data-answer='3,0'></li>
+            <li class='no'   data-label='Nice' data-answer='3,1'></li>
+            <li class='rand' data-label='Suprise me' data-answer='3,2'></li>
+          </ul>
+        </section>
+        </div>
+        <div id='instructions'></div>
+      </div>
+
+      <!-- Page 3 -->
+      <div id='page3'>
+        <div class='backbutton'></div>
+        <div id='loadProgress'></div>
+        <div class='spinner'></div>
+        <p id='selected'>You Selected:</p>
+        <p id='answer'>...</p>
+        <p id='yesNoRand'>...</p>
+        <p id='instructions'>Press Siri on the following screen and ask the question above.</p>
+        <div id='launchsiri'></div>
+      </div>
+
+      <!-- Page 4 -->
+      <div id='page4'>
+        <div class='backbutton'></div>
+        <p id='p4back' class='bubble triangle-border left'>How can I help you?</p>
+        <p id='questionBubble' class='bubble triangle-border left'></p>
+        <p id='answerBubble' class='triangle-border left'></p>
+        <div id='siriDeadMicButton'></div>
+        <div id='siriButton'></div>
+        <div id='siriMicButton'></div>
+      </div>
+
+  </div> <!--! end of #container -->
+
+  </div>
+  <div id="addToHomeScreen"></div>
+
+  <div id='infoFooter'>
+    <p>Watch the video - <a href='http://youtu.be/7JrfWpdQfCQ' target='_blank'>http://youtu.be/7JrfWpdQfCQ</a></p>
+    <p>Install the web app on your mobile - <a href='http://www.siriclaus.com' target='_blank'>SiriClaus.com</a></p>
+    <p class='besure'>Be sure to record the moment and then upload the video to YouTube with "SiriClaus" included in the title.</p>
+    <a class='logo' href='http://www.tribalddb.com' target='_blank'></a>
+    <p class='bestuse'>This site is experienced best on <a href='http://www.apple.com/safari/' target='_blank'>Apple Safari 5+</a>, <a href='https://www.google.com/chrome' target='_blank'>Google Chrome 16+</a> or on your iPhone running IOS 5.0 or higher.</p>
+  </div>
+
+  <ul id='share-btns'>
+    <li><a class='facebook' href='#'></a></li>
+    <li><a class='twitter' href='#'></a></li>
+    <li><a class='tumblr' href='#'></a></li>
+    <li><a class='gplus' href='#'></a></li>
+  </ul>
+</div>
+  <!-- JavaScript at the bottom for fast page loading -->
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+  
+  <!-- include SM2 library -->
+  <script type="text/javascript" src="js/soundmanager2-jsmin.js"></script>
+
+  <!-- scripts concatenated and minified via ant build script -->
+  <script src="js/mylibs/helper.js"></script>
+  <script src="js/libs/jquery.cookie.js"></script>
+  <script src="js/libs/add2home.js"></script>
+  <script src="js/libs/jquery.spritely-0.6.1.js"></script>
+  <script src="js/mylibs/jquery.jdoubletap.js"></script>
+  <script src="js/mylibs/jquery.preloadImages-1.0.js"></script>
+
+  <!-- Main App Script -->
+  <script src="js/script.js"></script>
+  <script src="js/mylibs/snow.js"></script>
+  
+  <!-- end concatenated and minified scripts-->
+
+  <script>
+    // iPhone Scale Bug Fix, read this when using http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug/
+    MBP.scaleFix();
+  </script>
+
+  <!-- Debugger - remove for production -->
+  <!-- <script src="https://getfirebug.com/firebug-lite.js"></script> -->
+
+  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
+  <script>
+    var _gaq=[["_setAccount","UA-22979088-2"],["_trackPageview"]];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+    s.parentNode.insertBefore(g,s)}(document,"script"));
+  </script>
+
+</body>
+</html>

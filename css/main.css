@@ -1,0 +1,423 @@
+body {
+  margin:0;
+  padding:0;
+  background:#000;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  position:relative;
+  overflow-x:hidden;
+}
+
+#iphone {
+  display:none;
+}
+
+.center{
+  margin: auto;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.spinner {
+  width:24px;
+  height:24px;
+  position:absolute;
+  top: 260px;
+  left: 144px;
+  display:block;
+  background:url(../img/loadinfo.net.gif) no-repeat;
+  z-index:1000;
+}
+
+.chatAngle {
+  width:10px;
+  height:10px;
+  background:url(../img/chat_angle.png) no-repeat;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+#container {
+  width:1280px;
+  height:480px;
+  position:relative;
+}
+
+#main {
+  width:20000em;
+  height:480px;
+  margin:0;
+  text-align:left;
+  position:absolute;
+}
+
+#addToHomeScreen {
+  width:242px;
+  height:111px;
+  background:url(../img/install.png) no-repeat;
+  display:none;
+}
+
+#main #page1 {
+  position:absolute;
+  top:0;
+  left:0;
+  display:block;
+  background:#999;
+  width:320px;
+  min-height:480px;
+  background:url(../img/default.jpg);
+}
+
+#main #page1 .spinner {
+  position:absolute;
+  top: 356px;
+  left: 143px;
+  display:block;
+}
+
+#getStartedPopup {
+  width:302px;
+  height: 338px;
+  position:absolute;
+  top:73px;
+  left:12px;
+  display:none;
+  z-index:999;
+  background:url(../img/welcome.png) no-repeat;
+  cursor:pointer;
+}
+
+#main #page2 {
+  position:absolute;
+  top:0;
+  left:320px;
+  display:block;
+  background:#1e1e1e;
+  width:320px;
+  min-height:480px;
+  background:url(../img/homescreen.jpg) no-repeat;
+}
+
+#main #page2 #infoButton {
+  position:absolute;
+  top: 3px;
+  left: 290px;
+  width:25px;
+  height:25px;
+  background:#00ff00;
+  cursor:pointer;
+  opacity:0;
+}
+
+#main #page3 {
+  position:absolute;
+  top:0;
+  left:640px;
+  display:block;
+  background:#1e1e1e;
+  width:320px;
+  min-height:480px;
+  background:url(../img/background.jpg) no-repeat;
+  color:#ffffff;
+}
+
+#main #page3 #doubleTap {
+  width: 247px;
+  height: 58px;
+  background:url(../img/doubleTap.png);
+  position:absolute;
+  left: 36px;
+  top: 0;
+  display:block;
+}
+
+#main #page3 #loadProgress {
+  width: 42px;
+  height:2px;
+  background:#c02825;
+  position:absolute;
+  left: 0;
+  bottom:0;
+  display:block;
+}
+
+#main #page4 {
+  position:absolute;
+  top:0;
+  left:960px;
+  display:block;
+  background:#1e1e1e;
+  width:320px;
+  min-height:480px;
+  background:url(../img/background.jpg) no-repeat;
+  color:#ffffff;
+}
+
+#main #page4 #answerBubble {
+
+  margin:0 0 9px 9px;
+  padding:5px 0px 6px 10px;
+  text-align:left;
+  font-size:14px;
+  color:#fff;
+  width:294px;
+  text-shadow: #000 0 -1px 0px;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+#main #page4 #questionBubble{
+  margin:0 0 9px 9px;
+  padding:5px 0px 6px 10px;
+  text-align:left;
+  font-size:14px;
+  color:#fff;
+  width:294px;
+  text-shadow: #000 0 -1px 0px;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+#main #page4 .bubble {
+  margin: 25px 0 9px 9px;
+  padding:5px 0px 6px 10px;
+  text-align:left;
+  font-size:14px;
+  color:#fff;
+  width: 294px;
+  text-shadow: #000 0 -1px 0px;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;  
+}
+
+#main #page4 #siriDeadMicButton {
+  position:absolute;
+  top:360px;
+  left:116px;
+  width:90px;
+  height:90px;
+  background:url('../img/siri_anim_off.png');
+  cursor:pointer;
+}
+
+#main #page4 #siriButton {
+  position:absolute;
+  top:360px;
+  left:116px;
+  width:90px;
+  height:90px;
+  background:url('../img/siri_think_anim.png');
+  cursor:pointer;
+}
+
+#main #page4 #siriMicButton {
+  position:absolute;
+  top:360px;
+  left:116px;
+  width:90px;
+  height:90px;
+  background:url('../img/siri_mic_anim.png');
+  cursor:pointer;
+}
+
+#main #page3 p{
+  text-align:center;
+  display:block;
+}
+
+#main #page3 #selected {
+  margin: 100px 0 0 0;
+  font-size:18px;
+  color:#8a8c8e;
+  text-shadow: #000 0 -1px 0px;
+}
+
+#main #page3 #answer {
+  margin:0;
+  font-size:31px;
+  color:#fff;
+  text-shadow: #000 0 -1px 0px;  
+}
+
+#main #page3 #yesNoRand {
+  margin:0;
+  font-size:18px;
+  color:#fff;
+  text-shadow: #000 0 -1px 0px; 
+}
+
+#main #page3 #instructions {
+  position:absolute;
+  top: 309px;
+  left:0px;
+  font-size: 20px;
+  color:#8a8c8e;
+  text-shadow: #000 0 -1px 0px;  
+  width: 316px;
+  line-height: 29px;
+}
+
+#main #page3 #launchsiri {
+  position:absolute;
+  width:174px;
+  height:68px;
+  top: 393px;
+  left:75px;
+  background:url(../img/launchsiri.png) no-repeat;
+  cursor:pointer;
+}
+
+#main #page2 #instructions {
+  width:302px;
+  height:332px;
+  position:absolute;
+  top:73px;
+  left:9px;
+  display:none;
+  z-index:999;
+  background:url(../img/welcome.png) no-repeat;
+  cursor:pointer;
+}
+
+#main #page2 #questions {
+  margin:158px 0px 0px 20px;
+}
+
+#main #page2 .question {
+  margin:36px 0 0 0px;
+  padding:0;
+  display:block;
+}
+
+#main #page2 .question p{
+  color:#FF0000;
+  font-size:16px;
+}
+
+#main #page2 .question .options{
+  margin:0;
+  padding:0;
+}
+
+#main #page2 .question .options li {
+  width:85px;
+  height:30px;
+  color:#ff0000;
+  list-style-type:none;
+  float:left;
+  display:block;
+  margin-right:10px;
+  background:#ff0000;
+  opacity:0.0;
+}
+
+#main #page2 .question .options li.yes {
+}
+
+#main #page2 .question .options li.no {
+  
+}
+
+#main #page2 .question .options li.rand {
+  
+}
+
+#landscapeModal {
+  width:480px;
+  height:320px;
+  background:#00ff00;
+  display:none;
+  z-index:9999;
+  background:url(../img/landscape_small.jpg) no-repeat;
+}
+
+/* Portrait */
+@media screen and (orientation:portrait) {
+  #container {
+    display:block;
+  }
+
+  #landscapeModal {
+    display:none;
+  }  
+
+}
+
+/* Landscape */
+@media screen and (orientation:landscape) {
+  #container {
+    display:none;
+  }
+
+  #landscapeModal {
+    display:block;
+  }
+
+}
+
+/* For retina display */
+@media screen and (-webkit-device-pixel-ratio: 2) {
+
+  #addToHomeScreen {
+    background-size:100% 100%;
+    background:url(../img/install@2x.png) no-repeat;
+
+  }
+
+  #main #page1 {
+    background-size:100% 100%;
+    background:url(../img/default@2x.jpg) no-repeat;
+  }
+
+  #getStartedPopup {
+    background-size:100% 100%;
+    background:url(../img/welcome@2x.png) no-repeat;    
+  }
+
+  #main #page2 {
+    background-size:100% 100%;
+    background:url(../img/homescreen@2x.jpg) no-repeat;
+  }
+
+  #main #page2 #instructions { 
+    background-size:100% 100%;
+    background:url(../img/welcome@2x.png) no-repeat;
+  }
+
+  #main #page3 #doubleTap {
+    background-size:100% 100%;
+    background:url(../img/doubleTap@2x.png);
+  }
+
+  #main #page3 {
+    background-size:100% 100%;
+    background:url(../img/background@2x.jpg) no-repeat;
+  }
+
+  #main #page3 #launchsiri{
+    background-size:100% 100%;
+    background:url(../img/launchsiri@2x.png) no-repeat;
+  }
+
+  #main #page4 {
+    background-size:100% 100%;
+    background:url(../img/background@2x.jpg) no-repeat;
+  }
+
+  #main #page4 #siriButton {
+
+    background:url('../img/siri_think_anim.png');
+  }
+
+  #main #page4 #siriMicButton {
+
+    background:url('../img/siri_mic_anim.png');
+  }
+
+  #landscapeModal {
+    background:url(../img/landscape_large.jpg) no-repeat;
+    background-size:100% 100%;
+  }
+
+}
